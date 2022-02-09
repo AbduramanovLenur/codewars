@@ -1,3 +1,5 @@
+"use strict";
+
 // 8 KYU -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Task 1
 // Write a function that checks if a given string (case insensitive) is a palindrome.
@@ -135,5 +137,165 @@
 // }
 
 // console.log(calculateTip(11, 'poor'));
+
+
+// Task 4
+// Make multiple functions that will return the sum, difference, modulus, product, quotient, and the exponent respectively.
+
+// Please use the following function names:
+
+//     addition = add
+
+// multiply = multiply
+
+// division = divide(both integer and float divisions are accepted)
+
+// modulus = mod
+
+// exponential = exponent
+
+// subtraction = subt
+
+// Note: All math operations will be: a(operation) b
+
+// a(operation) b *
+
+// Создайте несколько функций, которые будут возвращать сумму, разность, модуль, произведение, частное и показатель степени соответственно.
+
+// Пожалуйста, используйте следующие имена функций:
+
+// дополнение = добавить
+
+// умножить = умножить
+
+// Division = разделить (допускаются как целочисленные, так и дробные деления)
+
+// модуль = мод
+
+// экспоненциальный = показатель степени
+
+// вычитание = вычитание
+
+// Примечание. Все математические операции будут: a (операция) b
+
+// а (операция) б*
+
+// function add(a, b) {
+//     return a + b;
+// }
+
+// function divide(a, b) {
+//     return a / b;
+// }
+
+// function multiply(a, b) {
+//     return a * b;
+// }
+
+// function mod(a, b) {
+//     return a % b;
+// }
+
+// function exponent(a, b) {
+//     return Math.pow(a, b);
+// }
+
+// function subt(a, b) {
+//     return a - b;
+// }
+
+
+// Task 5 
+// Write a function that takes an array of words and smashes them together into a sentence and returns the sentence.You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word.Be careful, there shouldn't be a space at the beginning or the end of the sentence!
+// Example
+// ['hello', 'world', 'this', 'is', 'great']  => 'hello world this is great'
+// Напишите функцию, которая берет массив слов, объединяет их в предложение и возвращает предложение. Вы можете игнорировать необходимость очистки слов или добавления знаков препинания, но вы должны добавлять пробелы между каждым словом. Будьте внимательны, не должно быть пробела ни в начале, ни в конце предложения!
+// Пример
+// ['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
+
+// function smash(words) {
+//     return words.join(' ');
+// }
+
+// console.log(smash(['Hello', 'my', 'friend.', 'How', 'are', 'you?']));
+
+
+// Task 6
+// Our football team finished the championship. The result of each match look like "x:y". Results of all matches are recorded in the collection.
+
+// For example: ["3:1", "2:2", "0:1", ...]
+
+// Write a function that takes such collection and counts the points of our team in the championship. Rules for counting points for each match:
+
+// if x>y - 3 points
+// if x<y - 0 point
+// if x=y - 1 point
+// Notes:
+
+// there are 10 matches in the championship
+// 0 <= x <= 4
+// 0 <= y <= 4
+
+// Наша футбольная команда завершила чемпионат.Результат каждого совпадения выглядит как "x:y".Результаты всех матчей фиксируются в сборнике.
+
+//     Например: ["3:1", "2:2", "0:1", ...]
+
+// Напишите функцию, которая берет такую ​​коллекцию и считает очки нашей команды в чемпионате.Правила подсчета очков за каждый матч:
+
+// если х > у - 3 балла
+// если х < у - 0 баллов
+// если х = у - 1 балл
+// Примечания:
+
+// в чемпионате 10 матчей
+// 0 <= х <= 4
+// 0 <= у <= 4
+
+function points(games) {
+    const newArrGames = games.join('').replace(/:/g, '').split('');
+    let point = 0;
+
+    for (let i = 0; i <= newArrGames.length - 1; i += 2) {
+        if (+newArrGames[i] > +newArrGames[i + 1]) {
+            point += 3;
+        } else if (+newArrGames[i] < +newArrGames[i + 1]) {
+            point;
+        } else {
+            point++;
+        }
+    }
+    return point;
+}
+
+console.log(points(["1:0","2:0","3:0","4:0","2:1","1:3","1:4","2:3","2:4","3:4"]));
+
+
+// Task 7
+// Написать функцию рекурсию, которая выводит все значения в массиве
+
+// function recursionArr(array) {
+//     for (let i = 0; i <= array.length - 1; i++) {
+//         if (typeof array[i] != 'object') {
+//             console.log(array[i]);
+//         }
+//         recursionArr(array[i]);
+//     }
+// }
+
+// recursionArr([1, [2, 3], 4, [5, [6, 7]]]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // 7 KYU -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
