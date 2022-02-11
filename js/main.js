@@ -5,6 +5,7 @@
 // Write a function that checks if a given string (case insensitive) is a palindrome.
 // Напишите функцию, которая проверяет, является ли заданная строка (без учета регистра) палиндромом .
 
+// Coding:
 // function isPalindrome(x) {
 //     const arrStr = x.split('').reverse().join('').toLowerCase();
 //     let flag = false;
@@ -31,7 +32,7 @@
 // Предоставьте вывод в следующем формате: Для дат в будущем: «Вам ... лет». Для дат в прошлом: «Вы родитесь в ... году (годах)». Если год рождения равен запрашиваемому году: "Вы родились в этом году!"
 // "..." должны быть заменены числом, за которым следует один пробел. Имейте в виду, что вам нужно учитывать как «год», так и «годы», в зависимости от результата.
 
-
+// Coding:
 // 1 option
 // function calculateAge(myYear, year) {
 //     let result = '';
@@ -102,6 +103,7 @@
 // ...или - 1в С#
 // Поскольку вы хороший человек, вы всегда округляете чаевые, независимо от услуги.
 
+// Coding:
 // function calculateTip(amount, rating) {
 //     const rate = rating.toLowerCase();
 //     const percent = {
@@ -180,6 +182,7 @@
 
 // а (операция) б*
 
+// Coding:
 // function add(a, b) {
 //     return a + b;
 // }
@@ -213,6 +216,7 @@
 // Пример
 // ['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
 
+// Coding:
 // function smash(words) {
 //     return words.join(' ');
 // }
@@ -251,6 +255,7 @@
 // 0 <= х <= 4
 // 0 <= у <= 4
 
+// Coding:
 // function points(games) {
 //     const newArrGames = games.join('').replace(/:/g, '').split('');
 //     let point = 0;
@@ -273,6 +278,7 @@
 // Task 7
 // Написать функцию рекурсию, которая выводит все значения в массиве
 
+// Coding:
 // function recursionArr(array) {
 //     for (let i = 0; i <= array.length - 1; i++) {
 //         if (typeof array[i] != 'object') {
@@ -301,6 +307,7 @@
 // rps('paper','paper') // Draw!
 
 
+// Coding:
 // const rps = (p1, p2) => {
 //     let winner;
 
@@ -328,6 +335,7 @@
 // На ежегодном семейном собрании семье нравится находить возраст самого старшего из живущих членов семьи и возраст самого младшего члена семьи и вычислять разницу между ними.
 // Вам будет предоставлен массив возрастов всех членов семьи в любом порядке. Возраст будет указан в целых числах, поэтому ребенку в возрасте 5 месяцев будет присвоен «возраст» равный 0. Верните новый массив (кортеж в Python) с [самый младший возраст, самый старший возраст, разница между самым младшим и самым старшим возраст].
 
+// Coding:
 // function differenceInAges(ages){
 //     let agesArr = [];
 
@@ -350,6 +358,7 @@
 // Напишите функцию feast, которая принимает имя животного и блюдо в качестве аргументов и возвращает true или false, чтобы указать, разрешено ли животному принести блюдо на пир.
 // Предположим, что beastи dishвсегда строчные строки, и каждая из них состоит как минимум из двух букв. beastи dishможет содержать дефисы и пробелы, но они не будут отображаться в начале или конце строки. Они не будут содержать цифр.
 
+// Coding:
 // 1-option
 // function feast(beast, dish) {
 //     const dishStrs = dish.split('');
@@ -385,11 +394,162 @@
 // console.log(feast("brown bear", "bear claw"));
 
 
+// Task 11
+// In this simple exercise, you will build a program that takes a value, integer , and returns a list of its multiples up to another value, limit . If limit is a multiple of integer, it should be included as well. There will only ever be positive integers passed into the function, not consisting of 0. The limit will always be higher than the base.
+// For example, if the parameters passed are (2, 6), the function should return [2, 4, 6] as 2, 4, and 6 are the multiples of 2 up to 6.
+// If you can, try writing it in only one line of code.
+
+// В этом простом упражнении вы создадите программу, которая принимает значение , integer и возвращает список его кратных до другого значения, limit . Если limitкратно integer, оно также должно быть включено. В функцию всегда будут передаваться только положительные целые числа, не состоящие из 0. Предел всегда будет выше основания.
+// Например, если переданы параметры (2, 6), функция должна возвращать значения [2, 4, 6]2, 4 и 6, кратные от 2 до 6.
+// Если можете, попробуйте написать это только одной строкой кода.
+
+// Coding:
+// function findMultiples(integer, limit) {
+//     const arrStr = [];
+
+//     for (let i = integer; i <= limit; i++) {
+//         if (i % integer == 0) {
+//             arrStr.push(i);
+//         }
+//     }
+
+//     return arrStr;
+// }
 
 
+// console.log(findMultiples(5, 25));
 
 
+// Task 12
+// Your boss decided to save money by purchasing some cut-rate optical character recognition software for scanning in the text of old novels to your database. At first it seems to capture words okay, but you quickly notice that it throws in a lot of numbers at random places in the text. For example:
+// stringClean('! !') == '! !'
+// stringClean('123456789') == ''
+// stringClean('This looks5 grea8t!') == 'This looks great!'
+// Your harried co-workers are looking to you for a solution to take this garbled text and remove all of the numbers. Your program will take in a string and clean out all numeric characters, and return a string with spacing and special characters ~#$%^&!@*():;"'.,? all intact.
 
+// Ваш босс решил сэкономить деньги, купив удешевленное программное обеспечение для оптического распознавания символов для сканирования текста старых романов в вашу базу данных. Поначалу кажется, что он хорошо захватывает слова, но вы быстро замечаете, что он выбрасывает много чисел в случайных местах в тексте. Например:
+// stringClean('! !') == '! !'
+// stringClean('123456789') == ''
+// stringClean('This looks5 grea8t!') == 'This looks great!'
+// Ваши измученные коллеги ищут у вас решение взять этот искаженный текст и удалить все числа. Ваша программа примет строку и очистит все числовые символы и вернет строку с пробелами и специальными символами ~#$%^&!@*():;"'.,?без изменений.
+
+// Coding:
+// function stringClean(s) {
+//     return s.replace(/\d/g, '');
+// }
+
+// console.log(stringClean("123456789"));
+
+
+// Task 13
+// Return a new array consisting of elements which are multiple of their own index in input array (length > 1).
+// Some cases:
+// [22, -6, 32, 82, 9, 25] => [-6, 32, 25]
+// [68, -1, 1, -7, 10, 10] => [-1, 10]
+// [-56,-85,72,-26,-14,76,-27,72,35,-21,-67,87,0,21,59,27,-92,68] => [-85, 72, 0, 68]
+// Возвращает новый массив, состоящий из элементов, кратных их собственному индексу во входном массиве (длина > 1).
+// Некоторые случаи:
+// [22, -6, 32, 82, 9, 25] => [-6, 32, 25]
+// [68, -1, 1, -7, 10, 10] => [-1, 10]
+// [-56,-85,72,-26,-14,76,-27,72,35,-21,-67,87,0,21,59,27,-92,68] => [-85 , 72, 0, 68]
+
+// Coding:
+// const multipleOfIndex = (array) => array.filter((element, index) => element % index == 0);
+
+// console.log(multipleOfIndex([22, -6, 32, 82, 9, 25]));
+
+// Task 14
+// Complete the function which returns the weekday according to the input number:
+// 1 returns "Sunday"
+// 2 returns "Monday"
+// 3 returns "Tuesday"
+// 4 returns "Wednesday"
+// 5 returns "Thursday"
+// 6 returns "Friday"
+// 7 returns "Saturday"
+// Otherwise returns "Wrong, please enter a number between 1 and 7"
+
+// Завершите функцию, которая возвращает день недели в соответствии с введенным числом:
+// 1возвращается"Sunday"
+// 2возвращается"Monday"
+// 3возвращается"Tuesday"
+// 4возвращается"Wednesday"
+// 5возвращается"Thursday"
+// 6возвращается"Friday"
+// 7возвращается"Saturday"
+// В противном случае возвращает"Wrong, please enter a number between 1 and 7"
+
+// coding:
+// const whatday = (num) => {
+//     let result;
+//     if (num <= 7 && num > 0) {
+//         const days = {
+//             1: 'Sunday',
+//             2: 'Monday',
+//             3: 'Tuesday',
+//             4: 'Wednesday',
+//             5: 'Thursday',
+//             6: 'Friday',
+//             7: 'Saturday'
+//         }
+
+//         result = days[num];
+//     } else {
+//         result = 'Wrong, please enter a number between 1 and 7';
+//     }
+//     return result;
+// }
+
+// console.log(whatday(2));
+
+
+// Task 15
+// Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+// Example:
+// ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+
+// Возьмите массив и удалите каждый второй элемент из массива. Всегда сохраняйте первый элемент и начинайте удаление со следующего элемента.
+// Пример:
+// ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+
+// Coding:
+// function removeEveryOther(arr) {
+//     const array = [];
+
+//     for (let i = 0; i <= arr.length - 1; i += 2) {
+//         array.push(arr[i]);
+//     }
+//     return array;
+// }
+
+// console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again']));
+
+
+// Task 16
+// Add the isUpperCase method to String to see whether the string is ALL CAPS. For example:
+// "c".isUpperCase() == false
+// "C".isUpperCase() == true
+// "hello I AM DONALD".isUpperCase() == false
+// "HELLO I AM DONALD".isUpperCase() == true
+// "ACSKLDFJSgSKLDFJSKLDFJ".isUpperCase() == false
+// "ACSKLDFJSGSKLDFJSKLDFJ".isUpperCase() == true
+// In this Kata, a string is said to be in ALL CAPS whenever it does not contain any lowercase letter so any string containing no letters at all is trivially considered to be in ALL CAPS.
+
+// Добавьте isUpperCaseметод, Stringчтобы увидеть, написана ли строка ЗАГЛАВНЫМИ БУКВАМИ. Например:
+// "c".isUpperCase() == false
+// "C".isUpperCase() == true
+// "hello I AM DONALD".isUpperCase() == false
+// "HELLO I AM DONALD".isUpperCase() == true
+// "ACSKLDFJSgSKLDFJSKLDFJ".isUpperCase() == false
+// "ACSKLDFJSGSKLDFJSKLDFJ".isUpperCase() == true
+// В этом Ката говорится, что строка написана ВСЕ ЗАГЛАВНЫМИ буквами, если она не содержит строчных букв, поэтому любая строка, вообще не содержащая букв, тривиально считается написанной ВСЕМИ ЗАГЛАВНЫМИ буквами.
+
+// coding:
+// String.prototype.isUpperCase = function() {
+//     return this == this.toUpperCase();
+// }
+
+// console.log('C'.isUpperCase());
 
 
 
