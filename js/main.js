@@ -251,23 +251,23 @@
 // 0 <= х <= 4
 // 0 <= у <= 4
 
-function points(games) {
-    const newArrGames = games.join('').replace(/:/g, '').split('');
-    let point = 0;
+// function points(games) {
+//     const newArrGames = games.join('').replace(/:/g, '').split('');
+//     let point = 0;
 
-    for (let i = 0; i <= newArrGames.length - 1; i += 2) {
-        if (+newArrGames[i] > +newArrGames[i + 1]) {
-            point += 3;
-        } else if (+newArrGames[i] < +newArrGames[i + 1]) {
-            point;
-        } else {
-            point++;
-        }
-    }
-    return point;
-}
+//     for (let i = 0; i <= newArrGames.length - 1; i += 2) {
+//         if (+newArrGames[i] > +newArrGames[i + 1]) {
+//             point += 3;
+//         } else if (+newArrGames[i] < +newArrGames[i + 1]) {
+//             point;
+//         } else {
+//             point++;
+//         }
+//     }
+//     return point;
+// }
 
-console.log(points(["1:0","2:0","3:0","4:0","2:1","1:3","1:4","2:3","2:4","3:4"]));
+// console.log(points(["1:0","2:0","3:0","4:0","2:1","1:3","1:4","2:3","2:4","3:4"]));
 
 
 // Task 7
@@ -285,17 +285,60 @@ console.log(points(["1:0","2:0","3:0","4:0","2:1","1:3","1:4","2:3","2:4","3:4"]
 // recursionArr([1, [2, 3], 4, [5, [6, 7]]]);
 
 
+// Task 8
+// Rock Paper Scissors
+// Let's play! You have to return which player won! In case of a draw return Draw!.
+// Examples:
+// rps('scissors','paper') // Player 1 won!
+// rps('scissors','rock') // Player 2 won!
+// rps('paper','paper') // Draw!
+
+// Камень ножницы Бумага
+// Давайте играть! Вы должны вернуть, какой игрок выиграл! В случае ничьей возврат Draw!.
+// Примеры:
+// rps('scissors','paper') // Player 1 won!
+// rps('scissors','rock') // Player 2 won!
+// rps('paper','paper') // Draw!
 
 
+// const rps = (p1, p2) => {
+//     let winner;
+
+//     if (p1 === p2) {
+//         winner = 'Draw!'
+//     } else if (p1 === 'scissors' && p2 === 'paper') {
+//         winner = 'Player 1 won!';
+//     } else if (p1 === 'paper' && p2 === 'rock') {
+//         winner = 'Player 1 won!';
+//     } else if (p1 === 'rock' && p2 === 'scissors') {
+//         winner = 'Player 1 won!';
+//     } else {
+//         winner = 'Player 2 won!';
+//     }
+
+//     return winner;
+// };
+
+// console.log(rps('paper', 'scissors'));
 
 
+// Task 9
+// At the annual family gathering, the family likes to find the oldest living family member’s age and the youngest family member’s age and calculate the difference between them.
+// You will be given an array of all the family members' ages, in any order. The ages will be given in whole numbers, so a baby of 5 months, will have an ascribed ‘age’ of 0. Return a new array (a tuple in Python) with [youngest age, oldest age, difference between the youngest and oldest age].
+// На ежегодном семейном собрании семье нравится находить возраст самого старшего из живущих членов семьи и возраст самого младшего члена семьи и вычислять разницу между ними.
+// Вам будет предоставлен массив возрастов всех членов семьи в любом порядке. Возраст будет указан в целых числах, поэтому ребенку в возрасте 5 месяцев будет присвоен «возраст» равный 0. Верните новый массив (кортеж в Python) с [самый младший возраст, самый старший возраст, разница между самым младшим и самым старшим возраст].
 
+// function differenceInAges(ages){
+//     let agesArr = [];
 
+//     agesArr.push(Math.min(...ages));
+//     agesArr.push(Math.max(...ages));
+//     agesArr.push(Math.max(...ages) - Math.min(...ages));
 
+//     return agesArr;
+// }
 
-
-
-
+// console.log(differenceInAges([57, 99, 14, 32]));
 
 
 // 7 KYU -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
