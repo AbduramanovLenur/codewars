@@ -552,14 +552,30 @@
 // console.log('C'.isUpperCase());
 
 
+// Task 17
+// Basic Classes, this kata is mainly aimed at the new JS ES6 Update introducing classes
+// Task
+// Your task is to complete this Class, the Person class has been created. You must fill in the Constructor method to accept a name as string and an age as number, complete the get Info property and getInfo method/Info getter which should return johns age is 34
 
+// Базовые классы, это ката в основном нацелено на новое обновление JS ES6, в котором представлены классы.
+// Задача
+// Ваша задача завершить этот класс, класс Person создан. Вы должны заполнить метод конструктора, чтобы принять имя в виде строки и возраст в виде числа, заполнить свойство get Info и метод getInfo / метод получения информации, который должен возвращатьсяjohns age is 34
 
+// conding: 
+// class Person {
+//     constructor(name, age) {
+//         this.name = name;
+//         this.age = age;
+//     }
 
+//     info() {
+//         console.log(`${this.name}s age is ${this.age}`);
+//     }
+// }
 
+// const john = new Person('John', 34);
 
-
-
-
+// john.info();
 
 
 
